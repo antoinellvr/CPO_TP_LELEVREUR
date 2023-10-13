@@ -14,16 +14,14 @@ public class TP2_Bieres_LELEVREUR {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here*
+    
+    public static void main(String[] args){
         
-   BouteilleBiere uneBiere = new BouteilleBiere() ;
-     uneBiere.nom = "Cuvée des trolls";
-     uneBiere.degreAlcool = 7.0 ;
-     uneBiere.brasserie = "Dubuisson";
-     uneBiere.ouverte = false;
-             
-    uneBiere.lireEtiquette();
+        BouteilleBiere uneBiere = new BouteilleBiere("cuvée des trolls", 7, "Debuisson") ; //on crée une nouvelle instance de BouteilleBiere
+        //uneBiere.nom = "Cuvée des trolls";
+        //uneBiere.degreAlcool = 7.0 ;
+        //uneBiere.lireEtiquette();
+        
         BouteilleBiere autreBiere = new BouteilleBiere("Leffe", 6, "Abbayee de Leffe");
         
         //autreBiere.degreAlcool = 6.6;
@@ -35,13 +33,9 @@ public class TP2_Bieres_LELEVREUR {
         BouteilleBiere b5 = new BouteilleBiere("Shouff", 3, "ccc");
         
         //b3.lireEtiquette();
-        System.out.println(b3.toString());      //  les caractéristiques de la biere b3 sont affichées
+        System.out.println(b3.toString());      // on affiche les caractéristiques de la biere b3
         b4.Decapsuler();
         System.out.println(b4.toString());
     }
     
 }
-        
-    
- 
-
