@@ -28,9 +28,9 @@ public class TP2_Bieres_LELEVREUR {
         //autreBiere.nom = "Leffe";
         //autreBiere.brasserie = "Abbaye de Leffe";
         
-        BouteilleBiere b3 = new BouteilleBiere("cubanisto", 1, "aaa");
-        BouteilleBiere b4 = new BouteilleBiere("heineken", 2, "bbb");
-        BouteilleBiere b5 = new BouteilleBiere("Shouff", 3, "ccc");
+        BouteilleBiere b3 = new BouteilleBiere("CORONA", 1, "AB");
+        BouteilleBiere b4 = new BouteilleBiere("1664", 2, "CD");
+        BouteilleBiere b5 = new BouteilleBiere("CHOUFFE", 3, "EF");
         
         //b3.lireEtiquette();
         System.out.println(b3.toString());      // on affiche les caractéristiques de la biere b3
