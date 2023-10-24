@@ -10,31 +10,30 @@ import Personnages.Personnage;
  *
  * @author alele
  */
-public class Magicien extends Personnage{
+public class Magicien extends Personnage {
+
     boolean Confirme;
     String Attribut;
-    
-     public Magicien(String unNom, int uneVie, String unConfirme) {
+    public static int nbMagicien;
+
+    public Magicien(String unNom, int uneVie, String unConfirme) {
         super(unNom, uneVie);
         Attribut = unConfirme;
-        if (unConfirme=="Confirme"){
-            Confirme = true ;
+        if (unConfirme == "Confirme") {
+            Confirme = true;
+        } else {
+            Confirme = false;
         }
-        else{
-            Confirme = false ;
-        }
-        
-    }
-     
+        nbMagicien ++;
 
- @Override
+    }
+
+    @Override
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = "Personnage :" +nom +" : "+ nvxdevie + " , "+Attribut +" , ";
-        return chaine_a_retourner ;
-     
-    }
-    
-}
-    
+        chaine_a_retourner = "Personnage :" + nom + " : " + nvxdevie + " , " + Attribut + " , ";
+        return chaine_a_retourner;
 
+    }
+
+}

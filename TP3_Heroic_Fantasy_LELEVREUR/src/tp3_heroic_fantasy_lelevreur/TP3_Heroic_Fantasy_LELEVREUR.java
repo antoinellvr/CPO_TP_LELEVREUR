@@ -55,6 +55,59 @@ public class TP3_Heroic_Fantasy_LELEVREUR {
         TabPersonnage.add(Magicien2);    
         TabPersonnage.add(Guerrier1);    
         TabPersonnage.add(Guerrier2);    
+        
+      for (int i =0; i<4 ;i++){
+        System.out.println(TabPersonnage.get(i));
+        }
+        
+    // Pa/rtie 3
+    for (int i =0; i<10 ;i++){
+        System.out.println("");
+        }
     
+    //creation des perso
+    Magicien Magicien0 = new Magicien("Tonio",100,"Confirme");
+    Guerrier Guerrier0 =new Guerrier("julio",76,"a cheval");
+    
+
+//Creation des 3 epees
+    Epee Epee1 =new Epee("Baby",79,81);
+    Epee Epee2 =new Epee("Delta",56,76);
+    Epee Epee3 =new Epee ("Commando",35,58);
+//Creation des 3 Baton   
+    Baton Baton1 =new Baton("TOUTDUR",56,86);
+    Baton Baton2 =new Baton("TOUTMOU",50,93);
+    Baton Baton3 =new Baton("TOUTPOURRI",23,17);
+
+//on ajoute ces 3 armes  au Guerrier   
+    Guerrier0.AjoutArme(Epee1);
+    Guerrier0.AjoutArme(Epee2);
+    Guerrier0.AjoutArme(Baton3);
+    
+    Guerrier0.EquipeArme("Baby");
+   
+            
+//on ajoute au magicien ces 3 armes     
+    Magicien0.AjoutArme(Baton1);
+    Magicien0.AjoutArme(Baton2);
+    Magicien0.AjoutArme(Epee3);
+    
+    Magicien0.EquipeArme("TOUTMOU");
+    
+       System.out.println(Baton2);
+       System.out.println(Baton3);
+       System.out.println(Guerrier0);
+       System.out.println(Magicien0);
+
+          
+        System.out.println("Il y a " + Magicien.nbMagicien + " magiciens");
+        System.out.println("Il y a " + Guerrier.nbGuerrier + " guerriers");
+        System.out.println("Il y a " + Personnage.nbPersos + " personnages");
+
+
+
 }
+           
+    
+    
 }

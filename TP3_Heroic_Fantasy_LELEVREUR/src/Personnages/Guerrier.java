@@ -13,6 +13,7 @@ import Personnages.Personnage;
 public class Guerrier extends Personnage{
       boolean Cheval;
     String Attribut ;
+    public static int nbGuerrier;
     
     public Guerrier(String unNom, int uneVie, String unCheval) {
         super(unNom, uneVie);
@@ -23,6 +24,7 @@ public class Guerrier extends Personnage{
         else{
             Cheval = false ;
         }
+        nbGuerrier ++;
         
     }
         @Override
