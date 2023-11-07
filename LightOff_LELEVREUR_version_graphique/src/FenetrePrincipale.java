@@ -21,13 +21,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     public FenetrePrincipale() {
         initComponents();
         int nbLignes = 10;
-        int nbColonnes = 10
-                ;
-        
+        int nbColonnes = 10;
+        BRV.setVisible(false);
 
         this.grille = new GrilleDeJeu(nbLignes, nbColonnes);
         initialiserPartie();
-        
+
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
 
         for (int i = 0; i < nbLignes; i++) {
@@ -37,6 +36,51 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
             }
         }
+
+    }
+
+    public void desactiverBoutons() {
+
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        jButton4.setEnabled(false);
+        jButton5.setEnabled(false);
+        jButton6.setEnabled(false);
+        jButton7.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton9.setEnabled(false);
+        jButton10.setEnabled(false);
+        jButton11.setEnabled(false);
+        jButton12.setEnabled(false);
+        jButton13.setEnabled(false);
+        jButton14.setEnabled(false);
+        jButton15.setEnabled(false);
+        jButton16.setEnabled(false);
+        jButton17.setEnabled(false);
+        jButton18.setEnabled(false);
+        jButton19.setEnabled(false);
+        jButton20.setEnabled(false);
+        jButton21.setEnabled(false);
+        jButton21.setEnabled(false);
+        jButton22.setEnabled(false);
+    }
+
+    public void verifierGrilleEteinte() {
+
+        if (grille.cellulesToutesEteintes()) {
+
+            BRV.setText("BRAVO");
+
+            BRV.setVisible(true);
+
+            desactiverBoutons();
+
+        } else {
+
+        }
+
+        repaint();
 
     }
 
@@ -77,6 +121,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
+        BRV = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -273,139 +318,164 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         getContentPane().add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, 20));
 
+        BRV.setText("BRAVO");
+        getContentPane().add(BRV, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 70, 50));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(0);
+        verifierGrilleEteinte();
         repaint();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(1);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(2);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(5);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(3);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(4);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(6);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(7);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(8);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(9);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         this.grille.activerColonneDeCellules(0);
- repaint();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(1);
- repaint();
+        this.grille.activerColonneDeCellules(1);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(2);
- repaint();
+        this.grille.activerColonneDeCellules(2);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(3);
- repaint();
+        this.grille.activerColonneDeCellules(3);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(4);
- repaint();
-        
+        this.grille.activerColonneDeCellules(4);
+        verifierGrilleEteinte();
+        repaint();
+
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(5);
- repaint();
+        this.grille.activerColonneDeCellules(5);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(6);
- repaint();
+        this.grille.activerColonneDeCellules(6);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(7);
- repaint();
+        this.grille.activerColonneDeCellules(7);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(8);
- repaint();
+        this.grille.activerColonneDeCellules(8);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerColonneDeCellules(9);
- repaint();
+        this.grille.activerColonneDeCellules(9);
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
-         this.grille.activerDiagonaleDescendante();
- repaint();
+        this.grille.activerDiagonaleDescendante();
+        verifierGrilleEteinte();
+        repaint();
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
         this.grille.activerDiagonaleMontante();
+        verifierGrilleEteinte();
     }//GEN-LAST:event_jButton22ActionPerformed
 
     /**
@@ -444,6 +514,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BRV;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -469,7 +540,3 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     // End of variables declaration//GEN-END:variables
 }
-
-
-
-
